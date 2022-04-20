@@ -11,7 +11,6 @@ const Articles = () => {
          setArticles(articlesFromApi)
       }))
    }, [])
-      console.log(articles, '<< 2')
    return <div>
       <ul>
          {articles.map(article => {
