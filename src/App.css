@@ -1,0 +1,36 @@
+body {
+   background-color: #98c1d9;
+}
+
+h1 {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   color: #142139
+}
+
+ul {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+li {
+   border: 1px solid black;
+   width: 70%;
+   margin: 5px;
+   padding: 5px;
+   list-style-type: none;
+   background-color: #3d5a80;
+   color: #ee6c4d;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+p {
+   font-size: 20px;
+}
