@@ -14,6 +14,16 @@ export const getArticles = (topic) => {
   });
 };
 
+export const getArticle = (article_id) => {
+  let path = "/articles";
+  if (article_id) {
+    path += `/${article_id}`;
+  }
+  return newsApi.get(path).then(({ data }) => {
+    return data.article;
+  });
+};
+
 export const getTopics = () => {
   return newsApi.get("/topics").then(({ data }) => {
     return data.topics;
