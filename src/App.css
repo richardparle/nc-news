@@ -2,6 +2,10 @@ body {
    background-color: #98c1d9;
 }
 
+.navTab {
+   padding: 5px;
+}
+
 #individualArticle {
    border: 1px solid black;
    width: 70%;
