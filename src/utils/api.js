@@ -37,7 +37,5 @@ export const getComments = (article_id) => {
 };
 
 export const patchVote = (article_id) => {
-  return newsApi
-    .patch(`/articles/${article_id}`, { inc_votes: 1 })
-    .then(({ data }) => console.log({ data }));
+  return newsApi.patch(`/articles/${article_id}`, { inc_votes: 1 });
 };

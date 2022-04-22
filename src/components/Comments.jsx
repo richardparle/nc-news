@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { getComments } from '../utils/api'
 import { useParams } from "react-router-dom";
+import AddComment from './AddComment'
 
 const Comments = () => {
 
@@ -10,7 +11,6 @@ const Comments = () => {
    useEffect(() => {
       getComments(article_id)
       .then((commentsFromApi) => {
-         console.log(commentsFromApi)
          setComments(commentsFromApi)
       })
    }, [article_id])
@@ -20,10 +20,10 @@ const Comments = () => {
          <h2 id="commentHeader">Comments</h2>
          <ul>
             {comments.map((comment => {
-               console.log(comments)
                return <li key={comment.comment_id} className='commentLi'>{comment.body}</li>
             }))}
          </ul>
+         <AddComment setComments={setComments}/>
       </div>
    )
 }
