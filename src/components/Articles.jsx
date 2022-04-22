@@ -1,6 +1,6 @@
 import { getArticles } from "../utils/api";
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {Link} from 'react-router-dom'
 
 const Articles = () => {
    const [articles, setArticles] = useState([])
@@ -14,10 +14,16 @@ const Articles = () => {
    return <div>
       <ul>
          {articles.map(article => {
-            return <li key={article.article_id}>
-               <h2>{article.title}</h2>
-               <p>{article.author}</p>
-               </li>
+            return (
+                  <li key={article.article_id}>
+                     <h2>
+                        <Link to={`/api/articles/${article.article_id}`}>
+                           {article.title}
+                        </Link>
+                     </h2>
+                     <p>{article.author}</p>
+                  </li> 
+            )
          })}
       </ul>
    </div>

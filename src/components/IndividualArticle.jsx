@@ -14,13 +14,15 @@ const IndividualArticle = () => {
    }, [article_id, articles])
 
 return (
-   <div id="individualArticle">
-      <h2>{articles.title}</h2>
-      <p>{articles.body}</p>
-      <p>Author: {articles.author}</p>
-      <p>Topic: {articles.topic}</p>
-      <p>Votes: {articles.votes}</p>
-      <p>Comment count: {articles.comment_count}</p>
+   <div id="articlePage">
+      <div id="articleCard">
+         <h2>{articles.title}</h2>
+         <p>{articles.body}</p>
+         <p>Author: {articles.author}</p>
+         <p>Topic: {articles.topic}</p>
+         <p>Votes: {articles.votes}</p>
+         <p>Comment count: {articles.comment_count}</p>
+      </div>
    </div>
 )
 }
