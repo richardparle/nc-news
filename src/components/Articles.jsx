@@ -11,22 +11,25 @@ const Articles = () => {
          setArticles(articlesFromApi)
       }))
    }, [])
-   return <div>
-      <ul>
+   return (
+      <div>
+         <ul>
          {articles.map(article => {
             return (
-                  <li key={article.article_id}>
-                     <h2>
-                        <Link to={`/api/articles/${article.article_id}`}>
-                           {article.title}
-                        </Link>
-                     </h2>
-                     <p>{article.author}</p>
-                  </li> 
-            )
+               <li key={article.article_id}>
+               <h2>
+                  <Link to={`/api/articles/${article.article_id}`}>
+                  {article.title}
+                  </Link>
+               </h2>
+               <p>{article.author}</p>
+               </li>
+            ) 
          })}
       </ul>
    </div>
+   )
+   
 }
 
 export default Articles;

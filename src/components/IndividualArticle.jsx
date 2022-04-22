@@ -14,16 +14,16 @@ const IndividualArticle = () => {
       }))
    }, [article_id])
 
+
+
 return (
-   <div id="articlePage">
-      <div id="articleCard">
-         <h2>{articles.title}</h2>
-         <p>{articles.body}</p>
-         <p>Author: {articles.author}</p>
-         <p>Topic: {articles.topic}</p>
-         <p>Votes: {articles.votes}</p>
-         <p>Comment count: {articles.comment_count}</p>
-      </div>
+   <div id="individualArticle">
+      <h2>{article.title}</h2>
+      <p>{article.body}</p>
+      <p>Author: {article.author}</p>
+      <p>Topic: {article.topic}</p>
+      <p>Comment count: {article.comment_count}</p>
+      <Voting article={article}/>
    </div>
 )
 }
