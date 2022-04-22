@@ -27,6 +27,7 @@ return (
          <p>Comment count: {article.comment_count}</p>
          <Voting article={article}/>
       </div>
+      
    </div>
 )
 }
