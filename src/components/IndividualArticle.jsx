@@ -1,17 +1,18 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom'
 import { getArticle } from '../utils/api'
+import Voting from './Voting'
 
 const IndividualArticle = () => {
-   const [articles, setArticles] = useState([])
+   const [article, setArticle] = useState([])
    const {article_id} = useParams()
 
    useEffect(() => {
       getArticle(article_id)
-      .then((articlesFromApi => {
-         setArticles(articlesFromApi)
+      .then((articleFromApi => {
+         setArticle(articleFromApi)
       }))
-   }, [article_id, articles])
+   }, [article_id])
 
 return (
    <div id="articlePage">
