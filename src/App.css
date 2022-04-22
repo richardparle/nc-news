@@ -6,10 +6,10 @@ body {
    padding: 5px;
 }
 
-#individualArticle {
+#articleSection {
    border: 1px solid black;
    width: 70%;
-   margin: auto;
+   margin: 5px;
    padding: 20px;
    list-style-type: none;
    background-color: #3d5a80;
@@ -19,6 +19,28 @@ body {
    justify-content: center;
    align-items: center;
 }
+#commentSection {
+   border: 1px solid black;
+   width: 70%;
+   margin: 5px;
+   padding: 20px;
+   list-style-type: none;
+   background-color: #3d5a80;
+   color: #ee6c4d;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+#article {
+   display: flex;
+}
+
+/* #commentSection {
+   display: flex;
+   justify-content: start;
+} */
 
 h1, #topic-h2{
    display: flex;
@@ -47,6 +69,11 @@ li {
    flex-direction: column;
    justify-content: center;
    align-items: center;
+}
+
+.commentLi {
+   width: 100%;
+   background-color: #22497c;
 }
 
 a {
