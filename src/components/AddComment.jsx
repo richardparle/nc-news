@@ -12,6 +12,7 @@ const AddComment = ({setComments}) => {
       e.preventDefault()
       postComments(article_id, comment, username).then((res) => {
          setComments((currComments) => [...currComments, res])
+         console.log(comment)
          setComment('')
          setUsername('')
       })

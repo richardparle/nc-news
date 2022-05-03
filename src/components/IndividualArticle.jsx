@@ -7,6 +7,7 @@ import Comments from "./Comments";
 const IndividualArticle = () => {
    const [article, setArticle] = useState([])
    const {article_id} = useParams()
+   const { author } = article
 
    useEffect(() => {
       getArticle(article_id)
@@ -27,8 +28,7 @@ return (
          <p>Comment count: {article.comment_count}</p>
          <Voting article={article}/>
       </div>
-         <Comments />
-      
+         <Comments author={author}/>
    </div>
 )
 }

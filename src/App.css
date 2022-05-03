@@ -1,5 +1,6 @@
 body {
    background-color: #98c1d9;
+   font-family: "Google Sans",Roboto,Arial,sans-serif;
 }
 
 .navTab {
@@ -36,11 +37,6 @@ body {
 #article {
    display: flex;
 }
-
-/* #commentSection {
-   display: flex;
-   justify-content: start;
-} */
 
 h1, #topic-h2{
    display: flex;
@@ -129,3 +125,38 @@ input[type=text], select {
    background-color: #f2f2f2;
    padding: 20px;
  }
+
+ #orderByForm {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+ #sortBtns {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+ }
+
+.sortBtn {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 24px;
+  border-style: none;
+  box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+  color: #3c4043;
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 14px;
+  height: 48px;
+  padding: 2px 24px;
+  margin: 2px;
+}
+
+.sortBtn:hover {
+   border: 2px solid #4285f4;
+}
+
+.deleteBtn {
+   color: red;
+}

@@ -50,3 +50,7 @@ export const postComments = (article_id, body, username) => {
       return data.comment;
     });
 };
+
+export const deleteComment = (comment_id) => {
+  return newsApi.delete(`/comments/${comment_id}`);
+};
