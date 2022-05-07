@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import IndividualArticle from "./components/IndividualArticle";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ArticlesByTopic from "./components/ArticlesByTopic";
+import ErrorHandling from "./components/ErrorHandling";
 
 function App() {
   return (
@@ -20,6 +21,12 @@ function App() {
           <Route
             path="/api/articles/:article_id"
             element={<IndividualArticle />}
+          />
+          <Route
+            path="*"
+            element={
+              <ErrorHandling status="404" msg="This page does not exist" />
+            }
           />
         </Routes>
       </div>

@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Link, useParams } from 'react-router-dom'
 import { getArticles } from "../utils/api";
+import ErrorHandling from "./ErrorHandling";
 
 const ArticlesByTopic = () => {
    const [topicArticles, setTopicArticles] = useState([])
+   const [error, setError] = useState(null);
    const {topic} = useParams()
 
    useEffect(() => {
@@ -11,7 +13,13 @@ const ArticlesByTopic = () => {
       .then((articlesFromApi => {
          setTopicArticles(articlesFromApi)
       }))
+      .catch((err) => {
+         setError(err.response);
+      })
    }, [topic, setTopicArticles])
+
+   if (error) return <ErrorHandling status={error.status} msg={error.data.msg} />;
+
   return (
     <div>
        <ul>
