@@ -6,15 +6,14 @@ import AddComment from './AddComment'
 const Comments = ({author}) => {
 
    const [comments, setComments] = useState([])
-   const [isLoading, setIsLoading] = useState(false);
+   const [isLoading, setIsLoading] = useState(true);
    const {article_id} = useParams()
 
    useEffect(() => {
-      setIsLoading(true)
       getComments(article_id)
       .then((commentsFromApi) => {
-         setComments(commentsFromApi)
          setIsLoading(false);
+         setComments(commentsFromApi)
       })
    }, [article_id, comments])
 
@@ -43,7 +42,7 @@ const Comments = ({author}) => {
                   {comment.body}
                   <span id="commentAuthor">{commentAuthor}</span>
                
-               <button onClick={(e) => {
+               <button class='deleteBtn' onClick={(e) => {
                   removeComment(e, id, commentAuthor)
                }}
                >Delete Comment</button></li>

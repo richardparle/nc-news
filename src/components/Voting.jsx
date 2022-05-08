@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import {patchVote} from "../utils/api";
+import {patchIncreaseVote, patchDecreaseVote} from "../utils/api";
 
 const Voting = (props) => {
    const [vote, setVote] = useState(0)
@@ -14,13 +14,13 @@ const Voting = (props) => {
          <p id="btn-p">Votes: {vote + props.article.votes}</p>
          <button className="arrowBtn" onClick={() => {
             upVote()
-            patchVote(article_id)
+            patchIncreaseVote(article_id)
             .then()
          }
             }>⬆️</button>
          <button className="arrowBtn" onClick={() =>{
             downVote()
-            patchVote(article_id)
+            patchDecreaseVote(article_id)
             .then()
          } }>⬇️</button>
       </div>

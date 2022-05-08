@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap');
+
 body {
-   background-color: #98c1d9;
-   font-family: "Google Sans",Roboto,Arial,sans-serif;
+   background-color: rgba(225, 224, 224, 0.35);
+   font-family: 'Noto Sans', sans-serif;
 }
 
 .navTab {
@@ -8,26 +10,26 @@ body {
 }
 
 #articleSection {
-   border: 1px solid black;
+   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
    width: 70%;
    margin: 5px;
    padding: 20px;
    list-style-type: none;
-   background-color: #3d5a80;
-   color: #ee6c4d;
+   background-color: white;
+   color: rgb(75, 73, 73);
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
 }
 #commentSection {
-   border: 1px solid black;
+   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
    width: 70%;
    margin: 5px;
    padding: 20px;
    list-style-type: none;
-   background-color: #3d5a80;
-   color: #ee6c4d;
+   background-color: white;
+   color: rgb(75, 73, 73);
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -42,11 +44,12 @@ body {
 }
 
 h1, #topic-h2{
+   /* background-color: white; */
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   color: #142139
+   color: rgb(208, 4, 4)
 }
 
 ul {
@@ -57,35 +60,35 @@ ul {
 }
 
 li {
-   border: 1px solid black;
    width: 70%;
    margin: 5px;
    padding: 5px;
    list-style-type: none;
-   background-color: #3d5a80;
-   color: #ee6c4d;
+   background-color: white;
+   color: rgb(75, 73, 73);
    display: flex;
    flex-direction: column;
    justify-content: center;
    align-items: center;
+   box-shadow: rgb(0 0 0 / 20%) 0px 3px 3px -2px, rgb(0 0 0 / 14%) 0px 3px 4px 0px, rgb(0 0 0 / 12%) 0px 1px 8px 0px;
 }
 
 .commentLi {
    width: 100%;
-   background-color: #22497c;
+   background-color: white;
 }
 
 #commentAuthor {
-   color: white
+   color: rgba(0, 0, 0, 0.783);
 }
 
 a {
    text-decoration: none;
-   color: #ee6c4d;
+   color: rgb(208, 4, 4);
 }
 
 a:hover {
-   color: red
+   color: black;
 }
 
 p {
@@ -97,7 +100,7 @@ p {
 }
 
 .arrowBtn {
-   background-color: #3d5a80;
+   background-color: white;
    border: none;
    padding: 15px 32px;
    text-align: center;
@@ -120,9 +123,9 @@ input[type=text], select {
  
  input[type=submit] {
    width: 100%;
-   background-color: #143b6d;
+   background-color: rgb(197, 4, 4);
    border: 1px solid black;
-   color: #ee6c4d;
+   color: black;
    padding: 14px 20px;
    margin: 8px 0;
    border: none;
@@ -133,7 +136,7 @@ input[type=text], select {
 
  div.container {
    border-radius: 5px;
-   background-color: #f2f2f2;
+   background-color: white;
    padding: 20px;
  }
 
@@ -151,11 +154,11 @@ input[type=text], select {
 
 .sortBtn {
   align-items: center;
-  background-color: #fff;
+  background-color: white;
   border-radius: 24px;
   border-style: none;
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
-  color: #3c4043;
+  color: rgb(208, 4, 4);
   cursor: pointer;
   display: inline-flex;
   font-size: 14px;
@@ -165,9 +168,21 @@ input[type=text], select {
 }
 
 .sortBtn:hover {
-   border: 2px solid #4285f4;
+   border: 2px solid rgb(208, 4, 4);
 }
 
 .deleteBtn {
-   color: red;
+   color: rgb(208, 4, 4);
+   align-items: center;
+   background-color: white;
+   border-radius: 10px;
+   border-style: none;
+   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+   color: rgb(208, 4, 4);
+   cursor: pointer;
+   display: inline-flex;
+   font-size: 12px;
+   height: 25px;
+   padding: 2px 24px;
+   margin: 8px;
 }
