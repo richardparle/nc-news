@@ -65,7 +65,13 @@ const Articles = () => {
                   {article.title}
                   </Link>
                </h2>
-               <p>{article.author}</p>
+               <div id="commentDetails">
+                  <p>Author: {article.author}</p>
+                  <p>❤️ {article.votes}</p>
+                  {/* <p>Comments: {article.comment_count}</p> */}
+                  <p>Date added: {article.created_at.slice(0, 10)}</p>
+               </div>
+
                </li>
             ) 
          })}
