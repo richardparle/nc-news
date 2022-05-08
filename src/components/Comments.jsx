@@ -16,7 +16,7 @@ const Comments = ({author}) => {
          setComments(commentsFromApi)
          setIsLoading(false);
       })
-   }, [article_id])
+   }, [article_id, comments])
 
    const removeComment = (e, id, commentAuthor) => {
       e.preventDefault()

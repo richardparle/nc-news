@@ -4,11 +4,14 @@ import { Link } from 'react-router-dom'
 
 const Articles = () => {
    const [articles, setArticles] = useState([])
+   const [isLoading, setIsLoading] = useState(false);
 
    useEffect(() => {
+      setIsLoading(true)
       getArticles()
       .then((articlesFromApi => {
          setArticles(articlesFromApi)
+         setIsLoading(false);
       }))
    }, [])  
 
@@ -33,7 +36,7 @@ const Articles = () => {
    const sortByVoteCount = () => {
       const copyArticles = [...articles]
       const articlesByVoteCount = copyArticles.sort((a, b) => {
-         return a.votes - b.botes;
+          return a.votes - b.votes;
       })
       setArticles(articlesByVoteCount)
    }
@@ -52,7 +55,7 @@ const Articles = () => {
          <button className="sortBtn" onClick={() => sortByVoteCount()}>Sort by Votes</button>
          <button className="sortBtn" onClick={() => reverseOrder()}>Asc/Des</button>
       </div>
-
+      {isLoading ? <p>Loading comments</p> : null}
       <ul>
             {articles.map(article => {
             return (

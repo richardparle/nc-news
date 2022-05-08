@@ -12,6 +12,7 @@ const Topics = () => {
          setTopics(topicsFromApi)
       }))
    }, [])
+   
    return <div>
       <h2 id='topic-h2'>Select a topic</h2>
       <ul>

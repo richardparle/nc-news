@@ -19,7 +19,7 @@ const ArticlesByTopic = () => {
    }, [topic, setTopicArticles])
 
    if (error) return <ErrorHandling status={error.status} msg={error.data.msg} />;
-
+   
   return (
     <div>
        <ul>
