@@ -6,7 +6,7 @@ Welcome to my first app! 👋
 
 This is my first front-end app which was created during my time at Northcoders. To see it working [click here](https://rp-news.netlify.app).
 
-Or, if you'd like to run this locally on your machine, clone this repo with https://github.com/richardparle/nc-news.git and run 'npm start' in the terminal. To ensure it works correctly, please ensure you have at least version 14.17.3 of Node.
+Or, if you'd like to run this locally on your machine, clone this repo with https://github.com/richardparle/nc-news.git then run 'npm i' and 'npm start' in the terminal. To ensure it works correctly, please ensure you have at least version 14.17.3 of Node.
 
 # Features
 
