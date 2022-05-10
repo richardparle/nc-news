@@ -27,7 +27,7 @@ const ArticlesByTopic = () => {
             return(
                   <li key ={article.article_id}>
                   <h2>
-                     <Link to={`/api/articles/${article.article_id}`}>
+                     <Link to={`/articles/${article.article_id}`}>
                         {article.title}
                      </Link>
                   </h2>

@@ -10,13 +10,15 @@ const IndividualArticle = () => {
    const [error, setError] = useState(null);
    const {article_id} = useParams()
    const { author } = article
-   
+   const [isLoading, setIsLoading] = useState(false);
 
    useEffect(() => {
+      setIsLoading(true)
       setError(null);
       getArticle(article_id)
       .then((articleFromApi => {
          setArticle(articleFromApi)
+         setIsLoading(false);
       }))
       .catch((err) => {
          setError(err.response);
@@ -28,6 +30,7 @@ const IndividualArticle = () => {
 return (
    <div id="article">
       <div id="articleSection">
+      {isLoading ? <p>Loading page</p> : null}
          <h2>{article.title}</h2>
          <p>{article.body}</p>
          <p>Author: {article.author}</p>

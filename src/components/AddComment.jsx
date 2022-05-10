@@ -1,21 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { postComments } from "../utils/api";
 import { useParams } from "react-router-dom";
 
-const AddComment = ({setComments}) => {
+const AddComment = ({comments, setComments}) => {
 
    const {article_id} = useParams()
    const [comment, setComment] = useState()
    const [username, setUsername] = useState()
+   const [isLoading, setIsLoading] = useState(false);
    
    const handleSubmit = (e) => {
       e.preventDefault()
+      setIsLoading(true);
       postComments(article_id, comment, username).then((res) => {
-         setComments((currComments) => [...currComments, res])
-         console.log(comment)
-         setComment('')
-         setUsername('')
+         setComments((currComments) => [...currComments, res]);
+         setIsLoading(false);
       })
+      setComment('')
+      setUsername('')
    }
 
    return (
@@ -33,8 +35,10 @@ const AddComment = ({setComments}) => {
                   setUsername(e.target.value)
                }}></input>
 
-               <input type="submit" value="Submit"></input>
+               <input type="submit" value="Submit" onClick={() => {
+                  }}></input>
             </form>
+            {isLoading ? <p>Loading comments</p> : null}
          </div>
    )
 }

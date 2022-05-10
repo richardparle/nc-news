@@ -201,3 +201,15 @@ p {
    margin: 10px;
    font-size: 15px;
 }
+
+.loggedInUser {
+   color: rgb(208, 4, 4);
+   float: right;
+}
+
+.navAndHeader {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+}
