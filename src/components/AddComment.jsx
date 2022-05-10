@@ -38,7 +38,7 @@ const AddComment = ({comments, setComments}) => {
                <input type="submit" value="Submit" onClick={() => {
                   }}></input>
             </form>
-            {isLoading ? <p>Loading comments</p> : null}
+            {isLoading ? <p>Adding comment</p> : null}
          </div>
    )
 }
