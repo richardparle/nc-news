@@ -18,7 +18,7 @@ const Topics = () => {
    
    return <div>
       <h2 id='topic-h2'>Select a topic</h2>
-      {isLoading ? <p>Loading comments</p> : null}
+      {isLoading ? <p>Loading articles</p> : null}
       <ul>
          {topics.map(topic => {
             return <li key={topic.slug}>
