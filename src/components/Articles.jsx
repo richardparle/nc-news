@@ -9,6 +9,7 @@ const Articles = () => {
   useEffect(() => {
     setIsLoading(true);
     getArticles().then((articlesFromApi) => {
+      console.log(articlesFromApi, 'articlesFromApi')
       setArticles(articlesFromApi);
       setIsLoading(false);
     });

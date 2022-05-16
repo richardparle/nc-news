@@ -10,7 +10,7 @@ export const getArticles = (topic) => {
     path += `/?topic=${topic}`;
   }
   return newsApi.get(path).then(({ data }) => {
-    return data.articles;
+    return data;
   });
 };
 
@@ -49,8 +49,9 @@ export const postComments = (article_id, body, username) => {
       body: body,
       username: username,
     })
-    .then(({ data }) => {
-      return data.comment;
+    .then((dataObj) => {
+      console.log(dataObj.data.data.body, "dataObj");
+      return dataObj.data.data.body;
     });
 };
 

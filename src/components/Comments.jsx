@@ -41,7 +41,7 @@ const Comments = ({author}) => {
                const id = comment.comment_id;
                const commentAuthor = comment.author;
                
-               return <li key={id} className='commentLi'>
+               return <li key={Math.random() * 1000} className='commentLi'>
                   {comment.body}
                   <span id="commentAuthor">{commentAuthor}</span>
                
