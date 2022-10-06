@@ -3,6 +3,7 @@ import { getComments, deleteComment } from '../utils/api'
 import { useParams } from "react-router-dom";
 import AddComment from './AddComment'
 import UserContext from "./UserContext";
+import Spinner from "./Loading";
 
 const Comments = ({author}) => {
 
@@ -34,7 +35,7 @@ const Comments = ({author}) => {
    return (
       <div id="commentSection">
          <h2 id="commentHeader">Comments</h2>
-         {isLoading ? <p>Loading comments</p> : null}
+         {isLoading ? <Spinner /> : null}
          <AddComment comments={comments} setComments={setComments}/>
          <ul>
             {comments.map((comment => {

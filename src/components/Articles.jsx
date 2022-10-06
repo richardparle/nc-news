@@ -1,6 +1,7 @@
 import { getArticles } from "../utils/api";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Spinner from "./Loading";
 
 const Articles = () => {
   const [articles, setArticles] = useState([]);
@@ -9,7 +10,6 @@ const Articles = () => {
   useEffect(() => {
     setIsLoading(true);
     getArticles().then((articlesFromApi) => {
-      console.log(articlesFromApi, 'articlesFromApi')
       setArticles(articlesFromApi);
       setIsLoading(false);
     });
@@ -63,7 +63,7 @@ const Articles = () => {
           Asc/Des
         </button>
       </div>
-      {isLoading ? <p>Loading articles</p> : null}
+      {isLoading ? <Spinner /> : null}
       <ul>
         {articles.map((article) => {
           return (

@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { getTopics } from "../utils/api";
 import { Link } from 'react-router-dom'
+import Spinner from "./Loading";
 
 const Topics = () => {
    const [topics, setTopics] = useState([])
@@ -18,7 +19,7 @@ const Topics = () => {
    
    return <div>
       <h2 id='topic-h2'>Select a topic</h2>
-      {isLoading ? <p>Loading articles</p> : null}
+      {isLoading ? <Spinner /> : null}
       <ul>
          {topics.map(topic => {
             return <li key={topic.slug}>

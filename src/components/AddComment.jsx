@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { postComments } from "../utils/api";
 import { useParams } from "react-router-dom";
+import Spinner from "./Loading";
 
 const AddComment = ({comments, setComments}) => {
 
@@ -38,7 +39,7 @@ const AddComment = ({comments, setComments}) => {
                <input type="submit" value="Submit" onClick={() => {
                   }}></input>
             </form>
-            {isLoading ? <p>Adding comment</p> : null}
+            {isLoading ? <Spinner /> : null}
          </div>
    )
 }

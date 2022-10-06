@@ -4,6 +4,7 @@ import { getArticle } from '../utils/api'
 import Voting from './Voting'
 import Comments from "./Comments";
 import ErrorHandling from "./ErrorHandling";
+import Spinner from "./Loading";
 
 const IndividualArticle = () => {
    const [article, setArticle] = useState([])
@@ -30,7 +31,7 @@ const IndividualArticle = () => {
 return (
    <div id="article">
       <div id="articleSection">
-      {isLoading ? <p>Loading page</p> : null}
+         {isLoading ? <Spinner /> : null}
          <h2>{article.title}</h2>
          <p>{article.body}</p>
          <p>Author: {article.author}</p>
